@@ -66,6 +66,8 @@
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -99,6 +101,75 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyPhongKhamDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyPhongKhamDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPhongKhamDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongKhamDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPhongKhamDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongKhamDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPhongKhamDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongKhamDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPhongKhamDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongKhamDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPhongKhamDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongKhamDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPhongKhamDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongKhamDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPhongKhamDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongKhamDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPhongKhamDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongKhamDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPhongKhamDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongKhamDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyPhongKhamDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SP\SqlTuongTac.cs" />
+    <Compile Include="Views\BenhAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BenhAn.Designer.cs">
+      <DependentUpon>BenhAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BenhNhan.Designer.cs">
+      <DependentUpon>BenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Doanhthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Doanhthu.Designer.cs">
+      <DependentUpon>Doanhthu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +184,7 @@
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Main1.cs" />
     <Compile Include="Views\NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +197,21 @@
     <Compile Include="Views\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Thuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Thuoc.Designer.cs">
+      <DependentUpon>Thuoc.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\BenhAn.resx">
+      <DependentUpon>BenhAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BenhNhan.resx">
+      <DependentUpon>BenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Doanhthu.resx">
+      <DependentUpon>Doanhthu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Thuoc.resx">
+      <DependentUpon>Thuoc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="App1.config" />
@@ -197,6 +287,116 @@
     </None>
     <None Include="QuanLyPhongKhamDataSet1.xss">
       <DependentUpon>QuanLyPhongKhamDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet10.xsc">
+      <DependentUpon>QuanLyPhongKhamDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPhongKhamDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet10.xss">
+      <DependentUpon>QuanLyPhongKhamDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet11.xsc">
+      <DependentUpon>QuanLyPhongKhamDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPhongKhamDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet11.xss">
+      <DependentUpon>QuanLyPhongKhamDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet2.xsc">
+      <DependentUpon>QuanLyPhongKhamDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPhongKhamDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet2.xss">
+      <DependentUpon>QuanLyPhongKhamDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet3.xsc">
+      <DependentUpon>QuanLyPhongKhamDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPhongKhamDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet3.xss">
+      <DependentUpon>QuanLyPhongKhamDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet4.xsc">
+      <DependentUpon>QuanLyPhongKhamDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPhongKhamDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet4.xss">
+      <DependentUpon>QuanLyPhongKhamDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet5.xsc">
+      <DependentUpon>QuanLyPhongKhamDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPhongKhamDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet5.xss">
+      <DependentUpon>QuanLyPhongKhamDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet6.xsc">
+      <DependentUpon>QuanLyPhongKhamDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPhongKhamDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet6.xss">
+      <DependentUpon>QuanLyPhongKhamDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet7.xsc">
+      <DependentUpon>QuanLyPhongKhamDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPhongKhamDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet7.xss">
+      <DependentUpon>QuanLyPhongKhamDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet8.xsc">
+      <DependentUpon>QuanLyPhongKhamDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPhongKhamDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet8.xss">
+      <DependentUpon>QuanLyPhongKhamDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet9.xsc">
+      <DependentUpon>QuanLyPhongKhamDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyPhongKhamDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyPhongKhamDataSet9.xss">
+      <DependentUpon>QuanLyPhongKhamDataSet9.xsd</DependentUpon>
     </None>
     <None Include="Resources\login-512.png" />
   </ItemGroup>

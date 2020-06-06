@@ -40,11 +40,14 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnOK = new DevExpress.XtraEditors.SimpleButton();
+            this.txtPhanQuyen = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRePass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhanQuyen.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -53,7 +56,9 @@
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Controls.Add(this.txtPass);
+            this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.labelControl3);
+            this.groupControl1.Controls.Add(this.txtPhanQuyen);
             this.groupControl1.Controls.Add(this.txtRePass);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.txtUser);
@@ -175,6 +180,24 @@
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // txtPhanQuyen
+            // 
+            this.txtPhanQuyen.Location = new System.Drawing.Point(186, 155);
+            this.txtPhanQuyen.Name = "txtPhanQuyen";
+            this.txtPhanQuyen.Size = new System.Drawing.Size(246, 22);
+            this.txtPhanQuyen.TabIndex = 3;
+            this.txtPhanQuyen.EditValueChanged += new System.EventHandler(this.txtPass_EditValueChanged);
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(44, 159);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(72, 18);
+            this.labelControl7.TabIndex = 2;
+            this.labelControl7.Text = "Quyền hạn";
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -193,6 +216,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRePass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhanQuyen.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,5 +235,7 @@
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnOK;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.TextEdit txtPhanQuyen;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }

@@ -44,5 +44,17 @@ namespace Quanlyphongkham.Properties {
                 return ((string)(this["QuanLyPhongKhamConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point vitri {
+            get {
+                return ((global::System.Drawing.Point)(this["vitri"]));
+            }
+            set {
+                this["vitri"] = value;
+            }
+        }
     }
 }

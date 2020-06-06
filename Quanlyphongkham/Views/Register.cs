@@ -19,25 +19,25 @@ namespace Quanlyphongkham.Views
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-P35PM5F\SQLEXPRESS;Initial Catalog=QuanLyPhongKham;Integrated Security=True");
+        
        
         private void frmRegister_Load(object sender, EventArgs e)
         {
-            //string conString = ConfigurationManager.ConnectionStrings["QLUser"].ConnectionString.ToString();
-            //con = new SqlConnection(conString);
-            //con.Open();
+            
             skins();
         }
         
         private void btnOK_Click(object sender, EventArgs e)
         {
 
-            con.Open();
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-P35PM5F\SQLEXPRESS;Initial Catalog=QuanLyPhongKham;Integrated Security=True");
             string tk = txtUser.Text;
             string mk = txtPass.Text;
+          
             if (check(tk)==false||check(mk)==false)
             {
-                MessageBox.Show("Nhập lại mật khẩu không khớp!", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                MessageBox.Show("Tên đăng nhập và mật khẩu không sử dụng kí tự đặc biệt!", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
             if (mk != txtRePass.Text)
             {
@@ -46,26 +46,27 @@ namespace Quanlyphongkham.Views
             }
             else
             {
-               
+                
+                con.Open();
                 string sql = "select *from NguoiDung where TaiKhoan='" + tk + "' ";
                 SqlCommand cmdd = new SqlCommand(sql, con);
                 SqlDataReader dta = cmdd.ExecuteReader();
                 if (dta.Read() == true )
                 {
-                    if (MessageBox.Show("Đăng ký thất bại!", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
+                    if (MessageBox.Show("Tên đăng nhập đã có!", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                         dta.Close();
                     cmdd.Cancel();
                     con.Close();
                 }
-                else if (txtUser.Text!=" "||txtPass.Text!=" "||txtRePass.Text!=" ")
-                    { 
+                else if (txtUser.Text != " " || txtPass.Text != " " || txtRePass.Text != " " || txtPhanQuyen.Text != " ")
+                {
                     dta.Close();
                     cmdd.Cancel();
-                    string sqlInsert = " INSERT INTO NguoiDung VALUES (@TaiKhoan,@MatKhau)";
+                    string sqlInsert = " INSERT INTO NguoiDung VALUES (@TaiKhoan,@MatKhau,@PhanQuyen)";
                     SqlCommand cmd = new SqlCommand(sqlInsert, con);
                     cmd.Parameters.AddWithValue("TaiKhoan", txtUser.Text);
                     cmd.Parameters.AddWithValue("MatKhau", txtRePass.Text);
-                    
+                    cmd.Parameters.AddWithValue("PhanQuyen", txtPhanQuyen.Text);
                     cmd.ExecuteNonQuery();
                     if (MessageBox.Show("Đăng ký thành công!", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                     {
@@ -75,7 +76,7 @@ namespace Quanlyphongkham.Views
                         this.Close();
                     }
                 }
-                
+
             }
             con.Close();
         }
@@ -92,7 +93,7 @@ namespace Quanlyphongkham.Views
 
         private void frmRegister_FormClosing(object sender, FormClosingEventArgs e)
         {
-            con.Close();
+            
         }
 
         private void txtPass_EditValueChanged(object sender, EventArgs e)
