@@ -40,19 +40,20 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.doanhThuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyPhongKhamDataSet11 = new Quanlyphongkham.QuanLyPhongKhamDataSet11();
+            this.quanLyPhongKhamDataSet = new Quanlyphongkham.QuanLyPhongKhamDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colThoiGian = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDoanhThu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.doanhThuTableAdapter = new Quanlyphongkham.QuanLyPhongKhamDataSet11TableAdapters.DoanhThuTableAdapter();
+            this.doanhThuTableAdapter = new Quanlyphongkham.QuanLyPhongKhamDataSetTableAdapters.DoanhThuTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doanhThuBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyPhongKhamDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyPhongKhamDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(21, 21);
             this.label1.Name = "label1";
@@ -62,6 +63,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(47, 70);
             this.label2.Name = "label2";
@@ -71,6 +73,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(352, 348);
             this.label3.Name = "label3";
@@ -80,6 +83,7 @@
             // 
             // btnThongKe
             // 
+            this.btnThongKe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThongKe.Location = new System.Drawing.Point(219, 123);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(125, 57);
@@ -89,6 +93,7 @@
             // 
             // btnPrint
             // 
+            this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnPrint.Location = new System.Drawing.Point(678, 348);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(148, 42);
@@ -98,6 +103,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(162, 65);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -106,6 +112,7 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(287, 64);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -114,6 +121,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox2.Location = new System.Drawing.Point(417, 348);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(219, 23);
@@ -121,6 +129,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(162, 21);
             this.comboBox1.Name = "comboBox1";
@@ -130,6 +139,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gridControl1.DataSource = this.doanhThuBindingSource;
             this.gridControl1.Location = new System.Drawing.Point(407, 21);
             this.gridControl1.MainView = this.gridView1;
@@ -142,12 +152,12 @@
             // doanhThuBindingSource
             // 
             this.doanhThuBindingSource.DataMember = "DoanhThu";
-            this.doanhThuBindingSource.DataSource = this.quanLyPhongKhamDataSet11;
+            this.doanhThuBindingSource.DataSource = this.quanLyPhongKhamDataSet;
             // 
-            // quanLyPhongKhamDataSet11
+            // quanLyPhongKhamDataSet
             // 
-            this.quanLyPhongKhamDataSet11.DataSetName = "QuanLyPhongKhamDataSet11";
-            this.quanLyPhongKhamDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.quanLyPhongKhamDataSet.DataSetName = "QuanLyPhongKhamDataSet";
+            this.quanLyPhongKhamDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -200,7 +210,7 @@
             this.Load += new System.EventHandler(this.Doanhthu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doanhThuBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyPhongKhamDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyPhongKhamDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,10 +230,11 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private QuanLyPhongKhamDataSet11 quanLyPhongKhamDataSet11;
-        private System.Windows.Forms.BindingSource doanhThuBindingSource;
-        private QuanLyPhongKhamDataSet11TableAdapters.DoanhThuTableAdapter doanhThuTableAdapter;
+
         private DevExpress.XtraGrid.Columns.GridColumn colThoiGian;
         private DevExpress.XtraGrid.Columns.GridColumn colDoanhThu;
+        private QuanLyPhongKhamDataSet quanLyPhongKhamDataSet;
+        private System.Windows.Forms.BindingSource doanhThuBindingSource;
+        private QuanLyPhongKhamDataSetTableAdapters.DoanhThuTableAdapter doanhThuTableAdapter;
     }
 }

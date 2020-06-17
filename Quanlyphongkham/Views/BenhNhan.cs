@@ -21,78 +21,104 @@ namespace Quanlyphongkham.Views
 
         private void BenhNhan_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLyPhongKhamDataSet6.BenhNhan' table. You can move, or remove it, as needed.
-            this.benhNhanTableAdapter.Fill(this.quanLyPhongKhamDataSet6.BenhNhan);
+            // TODO: This line of code loads data into the 'quanLyPhongKhamDataSet.BenhNhan' table. You can move, or remove it, as needed.
+            this.benhNhanTableAdapter.Fill(this.quanLyPhongKhamDataSet.BenhNhan);
+
 
         }
 
         private void btnAddpatient_Click(object sender, EventArgs e)
         {
+            
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-P35PM5F\SQLEXPRESS;Initial Catalog=QuanLyPhongKham;Integrated Security=True");
-            con.Open();
             string ID = txtIDpatient.Text;
-            string sql = "select *from BenhNhan where ID='" + ID + "' ";
-            SqlCommand cmdd = new SqlCommand(sql, con);
-            SqlDataReader dta = cmdd.ExecuteReader();
-            if(txtIDpatient.Text=="")
+            if (ID == "")
             {
-                MessageBox.Show("Chưa nhập ID", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                dta.Close();
-            }
-            else if (dta.Read() == true)
-            {
-                MessageBox.Show("ID đã tồn tại!", "Xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                dta.Close();
+                MessageBox.Show("Moi nhap ID");
+                txtIDpatient.Select();
             }
             else
             {
-                dta.Close();
-                string sqlADDpatient = "insert into BenhNhan values (@ID,@TenBenhNhan,@NgaySinh,@GioiTinh,@DienThoai,@DiaChi,@NgheNghiep,@GhiChu)";
+                string[] data = new string[8];
+                data[0] = txtIDpatient.Text;
+                data[1] = txtNamepatient.Text;
+                data[2] = txtGenderpatient.Text;
+                data[3] = txtBornpatient.Text;
+                data[4] = txtAddresspatient.Text;
+                data[5] = txtPhonepatient.Text;
+                data[6] = txtJobpatient.Text;
+                data[7] = txtNotepatient.Text;
 
-                SqlCommand cmd = new SqlCommand(sqlADDpatient, con);
-               
-                cmd.Parameters.AddWithValue("ID", txtIDpatient.Text);
-                cmd.Parameters.AddWithValue("TenBenhNhan", txtNamepatient.Text);
-                cmd.Parameters.AddWithValue("GioiTinh", txtNotepatient.Text);
-                cmd.Parameters.AddWithValue("NgaySinh", txtBornpatient.Text);
-                cmd.Parameters.AddWithValue("Diachi", txtGenderpatient.Text);
-                cmd.Parameters.AddWithValue("DienThoai", txtJobpatient.Text);
-                cmd.Parameters.AddWithValue("NgheNghiep", txtAddresspatient.Text);
-                cmd.Parameters.AddWithValue("GhiChu", txtPhonepatient.Text);
-                cmdd.Cancel();     
-                cmd.ExecuteNonQuery();
-                this.Hide();
-                Views.frmBenhNhan myForm = new Views.frmBenhNhan();
-                myForm.Show();
+                con.Open();
+                SqlTuongTac s = new SqlTuongTac();
+                s.insert(data, 2);
                 con.Close();
-
+                MessageBox.Show("Record Insert Successfully!");
+                this.benhNhanTableAdapter.Fill(this.quanLyPhongKhamDataSet.BenhNhan);
             }
-            cmdd.Cancel();
-            con.Close();
         }
 
         private void btnDelpatient_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-P35PM5F\SQLEXPRESS;Initial Catalog=QuanLyPhongKham;Integrated Security=True");
             string ID = txtIDpatient.Text;
-            if (Convert.ToInt32(ID) != 0)
+            if (ID == "")
             {
-                SqlCommand cmd = new SqlCommand("delete BenhNhan where ID=@id", con);
-                con.Open();          
-                cmd.Parameters.AddWithValue("@id", ID);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Record Deleted Successfully!");
-                this.Hide();
-                Views.frmBenhNhan myForm = new Views.frmBenhNhan();             
-                myForm.Show();
-
+                MessageBox.Show("Mời nhập ID");
+                txtIDpatient.Select();
             }
             else
             {
-                MessageBox.Show("Please Select Record to Delete");
+                con.Open();
+                SqlTuongTac s = new SqlTuongTac();
+                s.del(ID, 2);
+                con.Close();
+                MessageBox.Show("Record Delete Successfully!");
+                this.benhNhanTableAdapter.Fill(this.quanLyPhongKhamDataSet.BenhNhan);
             }
-            con.Close();
+        }
+
+        private void btnUpdatepatient_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-P35PM5F\SQLEXPRESS;Initial Catalog=QuanLyPhongKham;Integrated Security=True");
+            string ID = txtIDpatient.Text;
+            if (ID == "")
+            {
+                MessageBox.Show("Mời nhập ID");
+                txtIDpatient.Select();
+            }
+            else
+            {
+                con.Open();
+                string sel = "select *from BenhNhan where ID='" + ID + "' ";
+                SqlCommand cmd = new SqlCommand(sel, con);
+                SqlDataReader dt = cmd.ExecuteReader();
+                if (dt.Read() == true)
+                {
+                    SqlTuongTac s = new SqlTuongTac();
+                    if (txtNamepatient.Text != "")
+                        s.update("@tenBenhNhan", txtNamepatient.Text, 2, ID);
+                    if (txtGenderpatient.Text != "")
+                        s.update("@gioiTinh", txtGenderpatient.Text, 2, ID);
+                    if (txtBornpatient.Text != "")
+                        s.update("@ngaySinh", txtBornpatient.Text, 2, ID);
+                    if (txtAddresspatient.Text != "")
+                        s.update("@diaChi", txtAddresspatient.Text, 2, ID);
+                    if (txtPhonepatient.Text != "")
+                        s.update("@dienThoai", txtPhonepatient.Text, 2, ID);
+                    if (txtJobpatient.Text != "")
+                        s.update("@ngheNghiep", txtJobpatient.Text, 2, ID);
+                    if (txtNotepatient.Text != "")
+                        s.update("@ghiChu", txtNotepatient.Text, 2, ID);
+                }
+                con.Close();
+                MessageBox.Show("Record Update Successfully!");
+                this.benhNhanTableAdapter.Fill(this.quanLyPhongKhamDataSet.BenhNhan);
+        }   }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

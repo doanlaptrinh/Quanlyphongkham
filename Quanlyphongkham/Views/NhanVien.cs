@@ -4,15 +4,21 @@ using System.Windows.Forms;
 
 namespace Quanlyphongkham.Views
 {
-    public partial class frmNhanVien : DevExpress.XtraEditors.XtraForm
+  
+    
+        public partial class frmNhanVien : DevExpress.XtraEditors.XtraForm
     {
         public frmNhanVien()
         {
             InitializeComponent();
+
         }
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-            this.nhanVienTableAdapter.Fill(this.quanLyPhongKhamDataSet2.NhanVien);
+            
+            // TODO: This line of code loads data into the 'quanLyPhongKhamDataSet.NhanVien' table. You can move, or remove it, as needed.
+            this.nhanVienTableAdapter.Fill(this.quanLyPhongKhamDataSet.NhanVien);
+
         }
         private void btnAddnv_Click(object sender, EventArgs e)
         {
@@ -40,7 +46,7 @@ namespace Quanlyphongkham.Views
                 s.insert(data, 1);
                 con.Close();
                 MessageBox.Show("Record Insert Successfully!");
-                this.nhanVienTableAdapter.Fill(this.quanLyPhongKhamDataSet2.NhanVien);
+                this.nhanVienTableAdapter.Fill(this.quanLyPhongKhamDataSet.NhanVien);
             }
         }    
 private void btnUpdateNV_Click(object sender, EventArgs e)
@@ -80,7 +86,7 @@ private void btnUpdateNV_Click(object sender, EventArgs e)
                 }
                 con.Close();
                 MessageBox.Show("Record Update Successfully!");
-                this.nhanVienTableAdapter.Fill(this.quanLyPhongKhamDataSet2.NhanVien);
+                this.nhanVienTableAdapter.Fill(this.quanLyPhongKhamDataSet.NhanVien);
             }
         }
         private void btnDelNV_Click(object sender, EventArgs e)
@@ -99,8 +105,28 @@ private void btnUpdateNV_Click(object sender, EventArgs e)
                 s.del(ID, 1);
                 con.Close();
                 MessageBox.Show("Record Delete Successfully!");
-                this.nhanVienTableAdapter.Fill(this.quanLyPhongKhamDataSet2.NhanVien);
+                this.nhanVienTableAdapter.Fill(this.quanLyPhongKhamDataSet.NhanVien);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtDecen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmNhanVien_AutoSizeChanged(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void GridNhanVien_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

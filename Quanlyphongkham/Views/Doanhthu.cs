@@ -20,8 +20,10 @@ namespace Quanlyphongkham.Views
 
         private void Doanhthu_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quanLyPhongKhamDataSet.DoanhThu' table. You can move, or remove it, as needed.
+            this.doanhThuTableAdapter.Fill(this.quanLyPhongKhamDataSet.DoanhThu);
             // TODO: This line of code loads data into the 'quanLyPhongKhamDataSet11.DoanhThu' table. You can move, or remove it, as needed.
-            this.doanhThuTableAdapter.Fill(this.quanLyPhongKhamDataSet11.DoanhThu);
+
 
         }
     }

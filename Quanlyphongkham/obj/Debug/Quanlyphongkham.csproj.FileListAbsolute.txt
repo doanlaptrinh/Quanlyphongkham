@@ -165,3 +165,4 @@ C:\Users\knyay\source\repos\Quanlyphongkham\Quanlyphongkham\bin\Debug\ja\DevExpr
 C:\Users\knyay\source\repos\Quanlyphongkham\Quanlyphongkham\bin\Debug\ru\DevExpress.XtraScheduler.v19.2.Core.resources.dll
 C:\Users\knyay\source\repos\Quanlyphongkham\Quanlyphongkham\obj\Debug\Quanlyphongkham.Views.Doanhthu.resources
 C:\Users\knyay\source\repos\Quanlyphongkham\Quanlyphongkham\obj\Debug\Quanlyphongkham.Views.frmBenhNhan.resources
+C:\Users\knyay\source\repos\Quanlyphongkham\Quanlyphongkham\obj\Debug\Quanlyphongkham.Views.KiemTra.resources

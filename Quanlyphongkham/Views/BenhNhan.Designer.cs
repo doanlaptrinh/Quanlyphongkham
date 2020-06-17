@@ -51,7 +51,7 @@
             this.txtPhonepatient = new System.Windows.Forms.TextBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.benhNhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyPhongKhamDataSet6 = new Quanlyphongkham.QuanLyPhongKhamDataSet6();
+            this.quanLyPhongKhamDataSet = new Quanlyphongkham.QuanLyPhongKhamDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenBenhNhan = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -61,68 +61,81 @@
             this.colDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgheNghiep = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.benhNhanTableAdapter = new Quanlyphongkham.QuanLyPhongKhamDataSet6TableAdapters.BenhNhanTableAdapter();
+            this.benhNhanTableAdapter = new Quanlyphongkham.QuanLyPhongKhamDataSetTableAdapters.BenhNhanTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.benhNhanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyPhongKhamDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyPhongKhamDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 9);
+            this.label11.Location = new System.Drawing.Point(3, 135);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(146, 17);
             this.label11.TabIndex = 44;
             this.label11.Text = "Danh Sách Bệnh Nhân";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtJobpatient
             // 
-            this.txtJobpatient.Location = new System.Drawing.Point(613, 44);
+            this.txtJobpatient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtJobpatient.Location = new System.Drawing.Point(854, 14);
             this.txtJobpatient.Name = "txtJobpatient";
             this.txtJobpatient.Size = new System.Drawing.Size(100, 23);
             this.txtJobpatient.TabIndex = 42;
             // 
             // txtNotepatient
             // 
-            this.txtNotepatient.Location = new System.Drawing.Point(613, 78);
+            this.txtNotepatient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNotepatient.Location = new System.Drawing.Point(854, 48);
             this.txtNotepatient.Name = "txtNotepatient";
             this.txtNotepatient.Size = new System.Drawing.Size(100, 23);
             this.txtNotepatient.TabIndex = 41;
             // 
             // txtGenderpatient
             // 
-            this.txtGenderpatient.Location = new System.Drawing.Point(382, 47);
+            this.txtGenderpatient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtGenderpatient.Location = new System.Drawing.Point(614, 17);
             this.txtGenderpatient.Name = "txtGenderpatient";
             this.txtGenderpatient.Size = new System.Drawing.Size(100, 23);
             this.txtGenderpatient.TabIndex = 40;
             // 
             // txtBornpatient
             // 
-            this.txtBornpatient.Location = new System.Drawing.Point(180, 108);
+            this.txtBornpatient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtBornpatient.Location = new System.Drawing.Point(405, 78);
             this.txtBornpatient.Name = "txtBornpatient";
             this.txtBornpatient.Size = new System.Drawing.Size(100, 23);
             this.txtBornpatient.TabIndex = 39;
             // 
             // txtIDpatient
             // 
-            this.txtIDpatient.Location = new System.Drawing.Point(180, 78);
+            this.txtIDpatient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtIDpatient.Location = new System.Drawing.Point(405, 48);
             this.txtIDpatient.Name = "txtIDpatient";
             this.txtIDpatient.Size = new System.Drawing.Size(100, 23);
             this.txtIDpatient.TabIndex = 38;
             // 
             // txtNamepatient
             // 
-            this.txtNamepatient.Location = new System.Drawing.Point(180, 47);
+            this.txtNamepatient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNamepatient.Location = new System.Drawing.Point(405, 17);
             this.txtNamepatient.Name = "txtNamepatient";
             this.txtNamepatient.Size = new System.Drawing.Size(100, 23);
             this.txtNamepatient.TabIndex = 37;
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(304, 81);
+            this.label7.Location = new System.Drawing.Point(536, 51);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 17);
             this.label7.TabIndex = 36;
@@ -130,8 +143,9 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(55, 114);
+            this.label6.Location = new System.Drawing.Point(280, 84);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 17);
             this.label6.TabIndex = 35;
@@ -139,8 +153,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(304, 108);
+            this.label5.Location = new System.Drawing.Point(536, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 17);
             this.label5.TabIndex = 34;
@@ -148,8 +163,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(304, 47);
+            this.label4.Location = new System.Drawing.Point(536, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 17);
             this.label4.TabIndex = 33;
@@ -157,8 +173,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 81);
+            this.label3.Location = new System.Drawing.Point(280, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(22, 17);
             this.label3.TabIndex = 32;
@@ -166,8 +183,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 47);
+            this.label2.Location = new System.Drawing.Point(280, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 17);
             this.label2.TabIndex = 31;
@@ -175,7 +193,8 @@
             // 
             // btnDelpatient
             // 
-            this.btnDelpatient.Location = new System.Drawing.Point(707, 164);
+            this.btnDelpatient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDelpatient.Location = new System.Drawing.Point(879, 116);
             this.btnDelpatient.Name = "btnDelpatient";
             this.btnDelpatient.Size = new System.Drawing.Size(75, 23);
             this.btnDelpatient.TabIndex = 30;
@@ -185,16 +204,19 @@
             // 
             // btnUpdatepatient
             // 
-            this.btnUpdatepatient.Location = new System.Drawing.Point(626, 164);
+            this.btnUpdatepatient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnUpdatepatient.Location = new System.Drawing.Point(798, 116);
             this.btnUpdatepatient.Name = "btnUpdatepatient";
             this.btnUpdatepatient.Size = new System.Drawing.Size(75, 23);
             this.btnUpdatepatient.TabIndex = 29;
             this.btnUpdatepatient.Text = "Sửa";
             this.btnUpdatepatient.UseVisualStyleBackColor = true;
+            this.btnUpdatepatient.Click += new System.EventHandler(this.btnUpdatepatient_Click);
             // 
             // btnAddpatient
             // 
-            this.btnAddpatient.Location = new System.Drawing.Point(545, 164);
+            this.btnAddpatient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAddpatient.Location = new System.Drawing.Point(717, 116);
             this.btnAddpatient.Name = "btnAddpatient";
             this.btnAddpatient.Size = new System.Drawing.Size(75, 23);
             this.btnAddpatient.TabIndex = 28;
@@ -204,8 +226,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(512, 47);
+            this.label1.Location = new System.Drawing.Point(753, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 17);
             this.label1.TabIndex = 33;
@@ -213,15 +236,17 @@
             // 
             // txtAddresspatient
             // 
-            this.txtAddresspatient.Location = new System.Drawing.Point(382, 111);
+            this.txtAddresspatient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtAddresspatient.Location = new System.Drawing.Point(614, 81);
             this.txtAddresspatient.Name = "txtAddresspatient";
             this.txtAddresspatient.Size = new System.Drawing.Size(100, 23);
             this.txtAddresspatient.TabIndex = 41;
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(512, 81);
+            this.label8.Location = new System.Drawing.Point(753, 51);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 17);
             this.label8.TabIndex = 33;
@@ -229,7 +254,8 @@
             // 
             // txtPhonepatient
             // 
-            this.txtPhonepatient.Location = new System.Drawing.Point(382, 78);
+            this.txtPhonepatient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtPhonepatient.Location = new System.Drawing.Point(614, 48);
             this.txtPhonepatient.Name = "txtPhonepatient";
             this.txtPhonepatient.Size = new System.Drawing.Size(100, 23);
             this.txtPhonepatient.TabIndex = 41;
@@ -237,10 +263,11 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.benhNhanBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(12, 190);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(763, 214);
+            this.gridControl1.Size = new System.Drawing.Size(1303, 261);
             this.gridControl1.TabIndex = 46;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -248,12 +275,12 @@
             // benhNhanBindingSource
             // 
             this.benhNhanBindingSource.DataMember = "BenhNhan";
-            this.benhNhanBindingSource.DataSource = this.quanLyPhongKhamDataSet6;
+            this.benhNhanBindingSource.DataSource = this.quanLyPhongKhamDataSet;
             // 
-            // quanLyPhongKhamDataSet6
+            // quanLyPhongKhamDataSet
             // 
-            this.quanLyPhongKhamDataSet6.DataSetName = "QuanLyPhongKhamDataSet6";
-            this.quanLyPhongKhamDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.quanLyPhongKhamDataSet.DataSetName = "QuanLyPhongKhamDataSet";
+            this.quanLyPhongKhamDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -352,41 +379,63 @@
             // 
             this.benhNhanTableAdapter.ClearBeforeFill = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.btnAddpatient);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.btnUpdatepatient);
+            this.panel1.Controls.Add(this.txtJobpatient);
+            this.panel1.Controls.Add(this.btnDelpatient);
+            this.panel1.Controls.Add(this.txtPhonepatient);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtAddresspatient);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtNotepatient);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtGenderpatient);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtBornpatient);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.txtIDpatient);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txtNamepatient);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1303, 155);
+            this.panel1.TabIndex = 47;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.gridControl1);
+            this.panel2.Location = new System.Drawing.Point(0, 155);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1303, 261);
+            this.panel2.TabIndex = 48;
+            // 
             // frmBenhNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 416);
-            this.Controls.Add(this.gridControl1);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtJobpatient);
-            this.Controls.Add(this.txtPhonepatient);
-            this.Controls.Add(this.txtAddresspatient);
-            this.Controls.Add(this.txtNotepatient);
-            this.Controls.Add(this.txtGenderpatient);
-            this.Controls.Add(this.txtBornpatient);
-            this.Controls.Add(this.txtIDpatient);
-            this.Controls.Add(this.txtNamepatient);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnDelpatient);
-            this.Controls.Add(this.btnUpdatepatient);
-            this.Controls.Add(this.btnAddpatient);
+            this.ClientSize = new System.Drawing.Size(1303, 416);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "frmBenhNhan";
             this.Text = "Bệnh Nhân";
             this.Load += new System.EventHandler(this.BenhNhan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.benhNhanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyPhongKhamDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyPhongKhamDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -413,9 +462,7 @@
         private System.Windows.Forms.TextBox txtPhonepatient;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private QuanLyPhongKhamDataSet6 quanLyPhongKhamDataSet6;
-        private System.Windows.Forms.BindingSource benhNhanBindingSource;
-        private QuanLyPhongKhamDataSet6TableAdapters.BenhNhanTableAdapter benhNhanTableAdapter;
+      
         private DevExpress.XtraGrid.Columns.GridColumn colID;
         private DevExpress.XtraGrid.Columns.GridColumn colTenBenhNhan;
         private DevExpress.XtraGrid.Columns.GridColumn colNgaySinh;
@@ -424,5 +471,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDiaChi;
         private DevExpress.XtraGrid.Columns.GridColumn colNgheNghiep;
         private DevExpress.XtraGrid.Columns.GridColumn colGhiChu;
+        private QuanLyPhongKhamDataSet quanLyPhongKhamDataSet;
+        private System.Windows.Forms.BindingSource benhNhanBindingSource;
+        private QuanLyPhongKhamDataSetTableAdapters.BenhNhanTableAdapter benhNhanTableAdapter;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

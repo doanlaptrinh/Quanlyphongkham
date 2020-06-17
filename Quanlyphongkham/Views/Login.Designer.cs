@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtPass = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -35,28 +36,32 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnOK = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.txtPass);
+            this.groupControl1.Controls.Add(this.btnOK);
+            this.groupControl1.Controls.Add(this.btnCancel);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.txtUser);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(12, 24);
+            this.groupControl1.Location = new System.Drawing.Point(349, -1);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(500, 140);
+            this.groupControl1.Size = new System.Drawing.Size(560, 310);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin đăng nhập";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(186, 87);
+            this.txtPass.Location = new System.Drawing.Point(186, 116);
             this.txtPass.Name = "txtPass";
             this.txtPass.Properties.UseSystemPasswordChar = true;
             this.txtPass.Size = new System.Drawing.Size(246, 22);
@@ -67,7 +72,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(44, 90);
+            this.labelControl2.Location = new System.Drawing.Point(44, 119);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(61, 18);
             this.labelControl2.TabIndex = 2;
@@ -75,7 +80,7 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(186, 49);
+            this.txtUser.Location = new System.Drawing.Point(186, 78);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(246, 22);
             this.txtUser.TabIndex = 1;
@@ -84,7 +89,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(44, 52);
+            this.labelControl1.Location = new System.Drawing.Point(44, 81);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(101, 18);
             this.labelControl1.TabIndex = 0;
@@ -94,7 +99,7 @@
             // 
             this.btnOK.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.Appearance.Options.UseFont = true;
-            this.btnOK.Location = new System.Drawing.Point(357, 189);
+            this.btnOK.Location = new System.Drawing.Point(345, 171);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(87, 29);
             this.btnOK.TabIndex = 7;
@@ -105,20 +110,29 @@
             // 
             this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Appearance.Options.UseFont = true;
-            this.btnCancel.Location = new System.Drawing.Point(80, 189);
+            this.btnCancel.Location = new System.Drawing.Point(186, 171);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(87, 29);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(351, 310);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 229);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnOK);
+            this.ClientSize = new System.Drawing.Size(908, 307);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupControl1);
             this.Name = "frmLogin";
             this.Text = "ĐĂNG NHẬP HỆ THỐNG";
@@ -128,6 +142,7 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,5 +156,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnOK;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
